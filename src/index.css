@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-earth-50: #faf6f1;
+  --color-earth-100: #f0e8dc;
+  --color-earth-200: #e2d1b8;
+  --color-earth-300: #d1b48f;
+  --color-earth-400: #c19565;
+  --color-earth-500: #b5804a;
+  --color-earth-600: #a76a3f;
+  --color-earth-700: #8b5335;
+  --color-earth-800: #724430;
+  --color-earth-900: #5e3a2a;
+  --color-earth-950: #351d15;
+
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e3ebe3;
+  --color-sage-200: #c8d8c8;
+  --color-sage-300: #a0bca0;
+  --color-sage-400: #739a73;
+  --color-sage-500: #537d53;
+  --color-sage-600: #3f6340;
+  --color-sage-700: #345034;
+  --color-sage-800: #2c402c;
+  --color-sage-900: #253525;
+  --color-sage-950: #111d11;
+
+  --color-sand-50: #fdfbf7;
+  --color-sand-100: #f9f3e8;
+  --color-sand-200: #f2e5cc;
+  --color-sand-300: #e8d1a8;
+  --color-sand-400: #ddb87e;
+  --color-sand-500: #d4a05e;
+  --color-sand-600: #c78a4a;
+  --color-sand-700: #a66e3e;
+  --color-sand-800: #865938;
+  --color-sand-900: #6d4a30;
+  --color-sand-950: #3a2518;
+
+  --color-clay-50: #fdf5f3;
+  --color-clay-100: #fce8e3;
+  --color-clay-200: #fad5cc;
+  --color-clay-300: #f5b7a8;
+  --color-clay-400: #ed8e77;
+  --color-clay-500: #e16b4d;
+  --color-clay-600: #cd5030;
+  --color-clay-700: #ac4026;
+  --color-clay-800: #8e3823;
+  --color-clay-900: #763323;
+  --color-clay-950: #40170e;
+
+  --color-moss-50: #f5f7ee;
+  --color-moss-100: #e8edda;
+  --color-moss-200: #d3ddb9;
+  --color-moss-300: #b5c88f;
+  --color-moss-400: #99b26a;
+  --color-moss-500: #7c974d;
+  --color-moss-600: #607739;
+  --color-moss-700: #4a5c2f;
+  --color-moss-800: #3d4a29;
+  --color-moss-900: #354026;
+  --color-moss-950: #1a2211;
+}
+
+@layer base {
+  body {
+    @apply bg-earth-50 text-earth-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-earth-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-earth-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-earth-400;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sage-600 hover:bg-sage-700 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-earth-200 hover:bg-earth-300 text-earth-800 font-medium py-2.5 px-5 rounded-xl transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-clay-600 hover:bg-clay-700 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-earth-100 p-6 transition-all duration-200 hover:shadow-md;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-earth-50 border border-earth-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sage-400 focus:border-transparent transition-all duration-200 text-earth-900 placeholder:text-earth-400;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 p-6;
+  }
+}
