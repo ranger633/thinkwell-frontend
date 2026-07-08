@@ -45,10 +45,7 @@ export default function Landing() {
       {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-sage-50 border border-sage-200 rounded-full px-4 py-1.5 text-sm text-sage-700 font-medium mb-6">
-            <span className="w-2 h-2 bg-sage-500 rounded-full animate-pulse"></span>
-            Available on Android & Web
-          </div>
+
           <h1 className="text-4xl md:text-6xl font-extrabold text-earth-900 leading-tight">
             Your mind deserves<br />
             <span className="text-sage-600">a companion that listens</span>
@@ -60,9 +57,7 @@ export default function Landing() {
             <Link to="/register" className="btn-primary text-base px-8 py-4 shadow-lg hover:shadow-xl">
               Get Started — It's Free
             </Link>
-            <a href="#download" className="btn-secondary text-base px-8 py-4">
-              Download App ↓
-            </a>
+
           </div>
           <p className="mt-4 text-sm text-earth-400">No credit card required. Free forever for personal use.</p>
         </div>
